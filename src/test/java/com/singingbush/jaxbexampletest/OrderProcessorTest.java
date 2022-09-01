@@ -1,5 +1,7 @@
-package com.singingbush.jaxbexample;
+package com.singingbush.jaxbexampletest;
 
+import com.singingbush.jaxbexample.AppMain;
+import com.singingbush.jaxbexample.OrderProcessor;
 import com.singingbush.jaxbexample.model.Shiporder;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
