@@ -4,7 +4,7 @@ import com.singingbush.jaxbexample.model.Shiporder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.xml.bind.JAXBException;
+import jakarta.xml.bind.JAXBException;
 import java.io.IOException;
 
 public class AppMain {
