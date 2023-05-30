@@ -6,8 +6,8 @@ module jaxb.example {
     // The generated model needs to be opened to JAXB to be usable
     opens com.singingbush.jaxbexample.model to jakarta.xml.bind;
 
-    // only the test package needs access to the model
-    exports com.singingbush.jaxbexample.model to jaxb.example.test;
+    // The generated model needs to be exported
+    exports com.singingbush.jaxbexample.model;
 
     exports com.singingbush.jaxbexample;
 }
