@@ -37,9 +37,9 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
 
-        <slf4j.version>2.0.7</slf4j.version>
-        <jaxb.version>4.0.0</jaxb.version>
-        <junit-jupiter.version>5.9.3</junit-jupiter.version>
+        <slf4j.version>2.0.10</slf4j.version>
+        <jaxb.version>4.0.1</jaxb.version>
+        <junit-jupiter.version>5.10.1</junit-jupiter.version>
     </properties>
 
     <dependencies>
@@ -73,7 +73,7 @@
         <dependency>
             <groupId>jakarta.activation</groupId>
             <artifactId>jakarta.activation-api</artifactId>
-            <version>2.1.0</version>
+            <version>2.1.2</version>
         </dependency>
 
         <dependency>
@@ -96,37 +96,37 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.11.0</version>
+                    <version>3.12.1</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-source-plugin</artifactId>
-                    <version>3.2.0</version>
+                    <version>3.3.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>3.5.0</version>
+                    <version>3.6.3</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>3.1.0</version>
+                    <version>3.2.3</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-failsafe-plugin</artifactId>
-                    <version>3.1.0</version>
+                    <version>3.2.3</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-enforcer-plugin</artifactId>
-                    <version>3.3.0</version>
+                    <version>3.4.1</version>
                 </plugin>
                 <plugin>
                     <groupId>org.owasp</groupId>
                     <artifactId>dependency-check-maven</artifactId>
-                    <version>8.2.1</version>
+                    <version>9.0.7</version>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -156,12 +156,9 @@
             </plugin>
 
             <plugin>
-<!--                <groupId>org.jvnet.jaxb2.maven2</groupId>-->
-<!--                <artifactId>maven-jaxb2-plugin</artifactId>-->
-<!--                <version>0.15.1</version>-->
-                <groupId>com.evolvedbinary.maven.jvnet</groupId>
-                <artifactId>jaxb30-maven-plugin</artifactId>
-                <version>0.15.0</version>
+                <groupId>org.jvnet.jaxb</groupId>
+                <artifactId>jaxb-maven-plugin</artifactId>
+                <version>4.0.0</version>
                 <executions>
                     <execution>
                         <goals>
@@ -173,23 +170,6 @@
                     <generatePackage>com.singingbush.jaxbexample.model</generatePackage>
                     <schemaDirectory>xsd</schemaDirectory>
                 </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>jakarta.xml.bind</groupId>
-                        <artifactId>jakarta.xml.bind-api</artifactId>
-                        <version>${jaxb.version}</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>com.sun.xml.bind</groupId>
-                        <artifactId>jaxb-core</artifactId>
-                        <version>${jaxb.version}</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>com.sun.xml.bind</groupId>
-                        <artifactId>jaxb-impl</artifactId>
-                        <version>${jaxb.version}</version>
-                    </dependency>
-                </dependencies>
             </plugin>
 
             <plugin>
